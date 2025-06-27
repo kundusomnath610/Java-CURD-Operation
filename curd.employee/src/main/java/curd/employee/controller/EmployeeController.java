@@ -1,10 +1,13 @@
 package curd.employee.controller;
 
+
+
 //import java.util.List;
 //import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -59,10 +62,10 @@ public class EmployeeController {
 	
 	// Search Employee
 	@PostMapping("/search")
-	public Employee searchEmployee(Long id) {
-		Employee employee = service.searchEmployee(id);
-		System.out.println(employee);
-		return employee;
+	public String searchEmployee(Long id, Model model) {
+		Employee emp = service.searchEmployee(id);
+		model.addAttribute("empObj", emp);
+		return "searchResult";
 	}
 	
 	

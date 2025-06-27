@@ -1,7 +1,6 @@
 package curd.employee.service;
 
-
-//import java.util.List;
+import java.util.List;
 //import java.util.Optional;
 
 import curd.employee.entity.Employee;
@@ -16,7 +15,7 @@ public interface EmployeeService {
 
 	Employee searchEmployee(Long id);
 
-	//List<Employee> getAllEmployee(); // Get All Employee Method for RestController
+	List<Employee> getAllEmployees(); // Get All Employee Method for RestController
 	
 }
 

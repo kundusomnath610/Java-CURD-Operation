@@ -2,6 +2,8 @@ package curd.employee.controller;
 
 
 
+import java.util.List;
+
 //import java.util.List;
 //import java.util.Optional;
 
@@ -66,6 +68,15 @@ public class EmployeeController {
 		Employee emp = service.searchEmployee(id);
 		model.addAttribute("empObj", emp);
 		return "searchResult";
+	}
+	
+	// Get All Employee
+	@GetMapping("/ViewAll")
+	public String getAllEmployees(Model model) {
+		List<Employee> empList = service.getAllEmployees();
+		System.out.println(empList);
+		model.addAttribute("empList", empList);
+		return "ViewAll";
 	}
 	
 	

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Employee Details</title>
+	</head>
+	<body>
+		<h3> Employee Details </h3>
+		
+		<table border ="1">
+		
+			<thead>
+			
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Department</th>
+					<th>Salary</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr th:each = "emp: ${empList}"></tr>
+				<tr th:each = {emp.id}></tr>
+				<tr th:each = {emp.name}></tr>
+				<tr th:each = {emp.Department}></tr>
+				<tr th:each = {emp.Salary}></tr>
+				
+			</tbody>
+		</table>
+	</body>
+</html>

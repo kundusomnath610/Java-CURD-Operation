@@ -1,6 +1,6 @@
 package curd.employee.service;
 
-//import java.util.List;
+import java.util.List;
 //import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,11 +32,10 @@ public class EmployeeServiceImplementation implements EmployeeService {
 		return repo.findById(id).get();
 	}
 
-//	public List<Employee> getAllEmployee() {
-//		return repo.findAll();
-//	}
-	
-	
+	@Override
+	public List<Employee> getAllEmployees() {
+		return repo.findAll();
+	}	
 }
 
 

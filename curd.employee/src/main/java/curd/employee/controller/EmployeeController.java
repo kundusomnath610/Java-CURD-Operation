@@ -51,11 +51,13 @@ public class EmployeeController {
 		service.deleteEmployee(id);
 	}
 	
+	// Search Employee Page
 	@GetMapping("/searchPage")
 	public String searchPage(Long id) {
 		return "search";
 	}
 	
+	// Search Employee
 	@PostMapping("/search")
 	public Employee searchEmployee(Long id) {
 		Employee employee = service.searchEmployee(id);
